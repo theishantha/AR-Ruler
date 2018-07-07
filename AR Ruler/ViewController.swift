@@ -60,6 +60,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
         
     func addDot(at hitResult : ARHitTestResult ){
+    
+        let dotGeometry = SCNSphere(radius: 0.005)
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor.red
+        
+        dotGeometry.materials = [material]
+        
+        let dotNode = SCNNode(geometry: dotGeometry)
+        
+        
+        
+    }
         
         
     }
