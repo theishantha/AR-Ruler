@@ -50,7 +50,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if let touchLocation = touches.first?.location(in: sceneView){
+            let hitTestResult = sceneView.hitTest(touchLocation, types: featurePoint)
+        }
     }
 //
 //    override func didReceiveMemoryWarning() {
