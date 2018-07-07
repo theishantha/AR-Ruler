@@ -51,7 +51,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touchLocation = touches.first?.location(in: sceneView){
-            let hitTestResult = sceneView.hitTest(touchLocation, types: featurePoint)
+            let hitTestResults = sceneView.hitTest(touchLocation, types: .featurePoint)
             
             if let hitResult = hitTestResults.first{
                 addDot(at: hitResult)
@@ -106,4 +106,4 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        // Reset tracking and/or remove existing anchors if consistent tracking is required
 //
 //    }
-}
+
